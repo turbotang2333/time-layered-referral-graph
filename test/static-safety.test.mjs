@@ -54,3 +54,9 @@ test('demo keeps backend integration as a static json fetch', () => {
   assert.equal(script.includes("const DATA_URL = './data/sample.json'"), true);
   assert.equal(script.includes("fetch(DATA_URL, { cache: 'no-store' })"), true);
 });
+
+test('README shows a public-safe demo screenshot', () => {
+  const readme = readFileSync(join(root, 'README.md'), 'utf8');
+  assert.equal(readme.includes('![时间分层关系图示例](docs/assets/demo-screenshot.png)'), true);
+  assert.equal(statSync(join(root, 'docs/assets/demo-screenshot.png')).isFile(), true);
+});
