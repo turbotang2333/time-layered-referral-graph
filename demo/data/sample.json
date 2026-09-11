@@ -1,0 +1,25 @@
+{
+  "generatedAt": "2026-09-11T08:00:00+08:00",
+  "nodes": [
+    { "id": "n_001", "parent": null, "submittedAt": "2026-09-10 19:20:00", "label": "A001" },
+    { "id": "n_002", "parent": "n_001", "submittedAt": "2026-09-10 19:26:00", "label": "A002" },
+    { "id": "n_003", "parent": "n_001", "submittedAt": "2026-09-10 19:28:00", "label": "A003" },
+    { "id": "n_004", "parent": "n_001", "submittedAt": "2026-09-10 19:29:00", "label": "A004" },
+    { "id": "n_005", "parent": "n_002", "submittedAt": "2026-09-10 19:44:00", "label": "A005" },
+    { "id": "n_006", "parent": "n_002", "submittedAt": "2026-09-10 20:04:00", "label": "A006" },
+    { "id": "n_007", "parent": "n_005", "submittedAt": "2026-09-10 20:38:00", "label": "A007" },
+    { "id": "n_008", "parent": null, "submittedAt": "2026-09-10 20:05:00", "label": "A008" },
+    { "id": "n_009", "parent": null, "submittedAt": "2026-09-10 20:06:00", "label": "A009" },
+    { "id": "n_010", "parent": null, "submittedAt": "2026-09-10 20:07:00", "label": "A010" },
+    { "id": "n_011", "parent": null, "submittedAt": "2026-09-10 20:08:00", "label": "A011" },
+    { "id": "n_012", "parent": null, "submittedAt": "2026-09-10 20:09:00", "label": "A012" },
+    { "id": "n_013", "parent": "n_003", "submittedAt": "2026-09-10 21:10:00", "label": "A013" },
+    { "id": "n_014", "parent": "n_013", "submittedAt": "2026-09-10 21:55:00", "label": "A014" },
+    { "id": "n_015", "parent": null, "submittedAt": "2026-09-11 00:12:00", "label": "A015" },
+    { "id": "n_016", "parent": "n_015", "submittedAt": "2026-09-11 00:16:00", "label": "A016" },
+    { "id": "n_017", "parent": "n_015", "submittedAt": "2026-09-11 00:18:00", "label": "A017" },
+    { "id": "n_018", "parent": "n_016", "submittedAt": "2026-09-11 01:02:00", "label": "A018" },
+    { "id": "n_019", "parent": null, "submittedAt": "2026-09-11 01:05:00", "label": "A019" },
+    { "id": "n_020", "parent": "n_018", "submittedAt": "2026-09-11 02:20:00", "label": "A020" }
+  ]
+}
