@@ -1,0 +1,264 @@
+:root {
+  color-scheme: light;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f5f7fb;
+  color: #18212f;
+}
+
+body {
+  margin: 0;
+}
+
+.page-shell {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 32px 22px 48px;
+}
+
+.page-header {
+  margin-bottom: 18px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #63748d;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(26px, 4vw, 38px);
+  letter-spacing: -.04em;
+}
+
+.intro {
+  margin: 10px 0 0;
+  color: #607087;
+}
+
+.status-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-bottom: 14px;
+  color: #607087;
+  font-size: 13px;
+}
+
+.status-line strong {
+  color: #26364d;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.level-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.button {
+  border: 1px solid #d7dfeb;
+  background: #fff;
+  border-radius: 999px;
+  padding: 7px 10px;
+  color: #43536a;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.button:hover,
+.button.is-folded {
+  border-color: #7185a2;
+  background: #e9eff8;
+  color: #17273e;
+}
+
+.button.reset {
+  margin-left: auto;
+}
+
+.chart-frame {
+  position: relative;
+  max-height: min(78vh, 940px);
+  overflow: auto;
+  border: 1px solid #d9e1ec;
+  border-radius: 16px;
+  background: #fff;
+  cursor: grab;
+  touch-action: none;
+  box-shadow: 0 8px 28px rgba(32, 50, 80, .06);
+}
+
+.chart-frame.dragging {
+  cursor: grabbing;
+  user-select: none;
+}
+
+.chart-frame svg {
+  display: block;
+  min-width: 100%;
+}
+
+.legend {
+  margin: 10px 1px 0;
+  color: #75849a;
+  font-size: 12px;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 5;
+  max-width: 280px;
+  padding: 10px;
+  border: 1px solid #dbe3ef;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .97);
+  box-shadow: 0 12px 35px rgba(32, 50, 80, .16);
+  font-size: 12px;
+  pointer-events: none;
+}
+
+.tooltip[hidden] {
+  display: none;
+}
+
+.tooltip-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  line-height: 1.7;
+}
+
+.tooltip-key {
+  flex: 0 0 auto;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.tooltip-key.identity { background: #eef1f7; color: #48566b; }
+.tooltip-key.source { background: #e7f0ff; color: #2c5ba8; }
+.tooltip-key.time { background: #edf7ed; color: #397242; }
+.tooltip-key.direct { background: #fff1dd; color: #965d13; }
+.tooltip-key.range { background: #f3ecff; color: #654a9c; }
+
+.time-grid {
+  stroke: #e6ebf2;
+  stroke-width: 1;
+}
+
+.time-grid.lane {
+  stroke-dasharray: 3 5;
+}
+
+.time-axis {
+  fill: #718095;
+  font-size: 11px;
+}
+
+.time-lane {
+  fill: #53637a;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.day-divider {
+  stroke: #7b8da7;
+  stroke-width: 2;
+  stroke-opacity: .8;
+}
+
+.day-label {
+  fill: #44546c;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.day-summary rect {
+  fill: #f1f4f8;
+  stroke: #dbe3ed;
+}
+
+.day-summary text {
+  fill: #4d5d74;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.edge {
+  fill: none;
+  stroke: #7890ad;
+  stroke-width: 1.35;
+  stroke-linecap: round;
+  opacity: .62;
+}
+
+.edge.outside {
+  opacity: .13;
+}
+
+.edge.in-chain {
+  stroke: #283c59;
+  stroke-width: 2.1;
+  opacity: 1;
+}
+
+.node {
+  cursor: pointer;
+  stroke: #fff;
+  stroke-width: 1.5;
+}
+
+.node.outside {
+  opacity: .2;
+}
+
+.node.in-chain {
+  stroke: #23364f;
+  stroke-width: 2.3;
+}
+
+.node.depth-0 { fill: #5b8ff9; }
+.node.depth-1 { fill: #68b984; }
+.node.depth-2 { fill: #f6bd60; }
+.node.depth-3 { fill: #e9788a; }
+.node.depth-4 { fill: #9b87f5; }
+.node.direct-0 { opacity: .54; }
+.node.direct-1 { opacity: .7; }
+.node.direct-2 { opacity: .86; }
+.node.direct-3 { opacity: 1; }
+
+.aggregate {
+  cursor: pointer;
+  fill: #5b8ff9;
+  fill-opacity: .84;
+  stroke: #fff;
+  stroke-width: 1.3;
+}
+
+.aggregate text {
+  fill: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.empty {
+  padding: 46px 20px;
+  border: 1px dashed #cdd7e6;
+  border-radius: 14px;
+  background: #fff;
+  color: #718095;
+  text-align: center;
+}
